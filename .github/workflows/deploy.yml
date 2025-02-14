@@ -17,9 +17,9 @@ jobs:
       - name: 🚀 設定 Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.19.0" # 指定最新穩定版本
-          channel: "stable" # 明確指定使用穩定版本
-          cache: true # 啟用快取以加速工作流程
+          flutter-version: "3.29.0" # 更新到最新版本以支援 Dart SDK 3.6.1
+          channel: "stable"
+          cache: true
 
       - name: 🔍 檢查 Flutter 版本
         run: flutter --version
