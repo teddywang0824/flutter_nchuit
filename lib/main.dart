@@ -40,7 +40,10 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 2, 2, 2),
           child: Image.network("https://i.imgur.com/sQVQhdk.png"),
         ),
-        title: const Text('NCHUIT'),
+        title: Padding(
+          padding: const EdgeInsets.only(right: 20),
+          child: const Text('NCHUIT'),
+        ),
         centerTitle: true,
         elevation: 0,
         actions: [
