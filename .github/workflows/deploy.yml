@@ -3,9 +3,8 @@ name: Deploy Flutter Web to GitHub Pages
 on:
   push:
     branches:
-      - main # 監聽 `main` 分支的推送事件，當你推送檔案到 `main` 時自動觸發
+      - main
 
-# 新增權限設定
 permissions:
   contents: write
   pages: write
@@ -13,17 +12,17 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest # 使用最新的 Ubuntu 環境運行這些步驟
+    runs-on: ubuntu-latest
     steps:
       - name: 🔽 檢出程式碼
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # 取得完整的 git 歷史記錄
+          fetch-depth: 0
 
       - name: 🚀 設定 Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.29.0" # 更新到最新版本以支援 Dart SDK 3.6.1
+          flutter-version: "3.29.0"
           channel: "stable"
           cache: true
 
@@ -31,19 +30,23 @@ jobs:
         run: flutter --version
 
       - name: 🧹 清理專案
-        run: flutter clean
+        run: flutter clean && rm -rf ~/.pub-cache
 
       - name: 📦 取得依賴套件
-        run: flutter pub get # 安裝 Flutter 依賴
+        run: flutter pub get
 
-      - name: 🏗 建置 Web 專案
+      - name: 設定版本號
         run: |
           VERSION=$(grep 'version:' pubspec.yaml | awk '{print $2}')
-          flutter build web --base-href /nchuit_test_website/ --release  # 建置 Web 應用程式
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: 🏗 建置 Web 專案
+        run: flutter build web --base-href /nchuit_test_website/ --release
 
       - name: 📤 部署到 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # 指定部署到 `gh-pages` 分支
-          folder: build/web # 指定部署資料夾
+          branch: gh-pages
+          folder: build/web
           commit-message: "Deploy Version ${{ env.VERSION }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
