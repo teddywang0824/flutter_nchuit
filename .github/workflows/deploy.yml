@@ -49,4 +49,5 @@ jobs:
           branch: gh-pages
           folder: build/web
           commit-message: "Deploy Version ${{ env.VERSION }}"
+          clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
