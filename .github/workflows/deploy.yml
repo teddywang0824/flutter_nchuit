@@ -5,6 +5,12 @@ on:
     branches:
       - main # 監聽 `main` 分支的推送事件，當你推送檔案到 `main` 時自動觸發
 
+# 新增權限設定
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest # 使用最新的 Ubuntu 環境運行這些步驟
