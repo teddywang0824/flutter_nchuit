@@ -5,6 +5,7 @@ import 'screens/about_page.dart';
 import 'screens/gallery_page.dart';
 import 'screens/social_links_page.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
   runApp(const NCHUInfoClubApp());
@@ -31,6 +32,7 @@ class NCHUInfoClubApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   HomePage({super.key});
   final Uri url = Uri.parse("https://forms.gle/cpCzXWN5kWUx7QQS9");
+  final Uri rick = Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +44,16 @@ class HomePage extends StatelessWidget {
         ),
         title: Padding(
           padding: const EdgeInsets.only(right: 20),
-          child: const Text('NCHUIT'),
+          child: const Text(
+            'NCHUIT',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
         ),
         centerTitle: true,
         elevation: 0,
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 40),
             child: ElevatedButton(
               onPressed: () async {
                 if (await canLaunchUrl(url)) {
@@ -82,6 +87,80 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   _buildBanner(),
+                  const SizedBox(height: 30),
+                  DefaultTextStyle(
+                    style: const TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Courier New',
+                      color: Colors.black,
+                      overflow: TextOverflow.fade,
+                    ),
+                    maxLines: 1,
+                    child: AnimatedTextKit(
+                      repeatForever: true,
+                      animatedTexts: [
+                        TypewriterAnimatedText(
+                          "這裡是中興資訊社官網，點擊下方資訊更了解我們👇",
+                          speed: const Duration(milliseconds: 140),
+                          textAlign: TextAlign.center,
+                        ),
+                        TypewriterAnimatedText(
+                            'print("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                            'std::cout << "這裡是中興資訊社官網，點擊下方資訊更了解我們👇" << std::endl;',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                          "JavaScript 跟 Java 不一樣ㄟ",
+                          speed: const Duration(milliseconds: 140),
+                          textAlign: TextAlign.center,
+                        ),
+                        TypewriterAnimatedText(
+                            r'printf("這裡是中興資訊社官網，點擊下方資訊更了解我們👇\n");',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                            'System.out.println("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                            'console.log("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText("\$ rm -rf",
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                            r'$display("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText('我要吃社團尾牙!!',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                            'println!("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                        TypewriterAnimatedText(
+                            'fmt.Println("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
+                            speed: const Duration(milliseconds: 140),
+                            textAlign: TextAlign.center),
+                      ],
+                      displayFullTextOnTap: true,
+                      stopPauseOnTap: true,
+                      pause: Duration(seconds: 2),
+                      onTap: () async {
+                        if (await canLaunchUrl(rick)) {
+                          await launchUrl(rick,
+                              mode: LaunchMode.externalApplication);
+                        } else {
+                          debugPrint("無法開啟連結");
+                        }
+                      },
+                    ),
+                  ),
                   const SizedBox(height: 30),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -204,7 +283,7 @@ class HomePage extends StatelessWidget {
             ),
             _buildMenuCard(
               icon: Icons.groups,
-              title: '關於我們',
+              title: '社團資訊',
               onTap: () => Navigator.push(
                 context,
                 PageRouteBuilder(
@@ -293,9 +372,12 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               title,
-              style: const TextStyle(
-                fontSize: 16,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
+                height: 1.7, // 調整行高
+                letterSpacing: 0.5, // 增加字距
               ),
             ),
           ],
