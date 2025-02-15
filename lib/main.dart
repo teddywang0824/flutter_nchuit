@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/events_page.dart';
+// import 'screens/events_page.dart';
 import 'screens/course_page.dart';
 import 'screens/about_page.dart';
 import 'screens/gallery_page.dart';
@@ -22,7 +22,7 @@ class NCHUInfoClubApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         brightness: Brightness.light,
-        fontFamily: 'Noto Sans TC',
+        fontFamily: 'NotoSansTC',
       ),
       home: HomePage(),
     );
@@ -88,78 +88,94 @@ class HomePage extends StatelessWidget {
                 children: [
                   _buildBanner(),
                   const SizedBox(height: 30),
-                  DefaultTextStyle(
-                    style: const TextStyle(
-                      fontSize: 20.0,
-                      fontFamily: 'Courier New',
-                      color: Colors.black,
-                      overflow: TextOverflow.fade,
-                    ),
-                    maxLines: 1,
-                    child: AnimatedTextKit(
-                      repeatForever: true,
-                      animatedTexts: [
-                        TypewriterAnimatedText(
-                          "這裡是中興資訊社官網，點擊下方資訊更了解我們👇",
-                          speed: const Duration(milliseconds: 140),
-                          textAlign: TextAlign.center,
+                  LayoutBuilder(
+                    builder: (context, constraints) {
+                      // 根據螢幕寬度決定文字大小和容器高度
+                      double textSize =
+                          constraints.maxWidth > 900 ? 24.0 : 18.0;
+                      double containerHeight =
+                          constraints.maxWidth > 900 ? 40.0 : 80.0;
+
+                      return SizedBox(
+                        height: containerHeight,
+                        width: constraints.maxWidth > 900
+                            ? double.infinity
+                            : constraints.maxWidth - 50,
+                        child: DefaultTextStyle(
+                          style: TextStyle(
+                            fontSize: textSize,
+                            fontFamily: 'Courier New',
+                            color: Colors.black,
+                            overflow: TextOverflow.fade,
+                          ),
+                          maxLines: 1,
+                          child: AnimatedTextKit(
+                            repeatForever: true,
+                            animatedTexts: [
+                              TypewriterAnimatedText(
+                                "這裡是中興資訊社官網，點擊下方資訊更了解我們👇",
+                                speed: const Duration(milliseconds: 140),
+                                textAlign: TextAlign.center,
+                              ),
+                              TypewriterAnimatedText(
+                                  'print("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                  'std::cout << "這裡是中興資訊社官網，點擊下方資訊更了解我們👇" << std::endl;',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                "JavaScript 跟 Java 不一樣ㄟ",
+                                speed: const Duration(milliseconds: 140),
+                                textAlign: TextAlign.center,
+                              ),
+                              TypewriterAnimatedText(
+                                  r'printf("這裡是中興資訊社官網，點擊下方資訊更了解我們👇\n");',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                  'System.out.println("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                  'console.log("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText("\$ rm -rf",
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                  r'$display("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText('我要吃社團尾牙!!',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                  'println!("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                              TypewriterAnimatedText(
+                                  'fmt.Println("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
+                                  speed: const Duration(milliseconds: 140),
+                                  textAlign: TextAlign.center),
+                            ],
+                            displayFullTextOnTap: true,
+                            stopPauseOnTap: true,
+                            pause: Duration(seconds: 2),
+                            onTap: () async {
+                              if (await canLaunchUrl(rick)) {
+                                await launchUrl(rick,
+                                    mode: LaunchMode.externalApplication);
+                              } else {
+                                debugPrint("無法開啟連結");
+                              }
+                            },
+                          ),
                         ),
-                        TypewriterAnimatedText(
-                            'print("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                            'std::cout << "這裡是中興資訊社官網，點擊下方資訊更了解我們👇" << std::endl;',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                          "JavaScript 跟 Java 不一樣ㄟ",
-                          speed: const Duration(milliseconds: 140),
-                          textAlign: TextAlign.center,
-                        ),
-                        TypewriterAnimatedText(
-                            r'printf("這裡是中興資訊社官網，點擊下方資訊更了解我們👇\n");',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                            'System.out.println("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                            'console.log("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText("\$ rm -rf",
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                            r'$display("這裡是中興資訊社官網，點擊下方資訊更了解我們👇");',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText('我要吃社團尾牙!!',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                            'println!("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                        TypewriterAnimatedText(
-                            'fmt.Println("這裡是中興資訊社官網，點擊下方資訊更了解我們👇")',
-                            speed: const Duration(milliseconds: 140),
-                            textAlign: TextAlign.center),
-                      ],
-                      displayFullTextOnTap: true,
-                      stopPauseOnTap: true,
-                      pause: Duration(seconds: 2),
-                      onTap: () async {
-                        if (await canLaunchUrl(rick)) {
-                          await launchUrl(rick,
-                              mode: LaunchMode.externalApplication);
-                        } else {
-                          debugPrint("無法開啟連結");
-                        }
-                      },
-                    ),
+                      );
+                    },
                   ),
                   const SizedBox(height: 30),
                   Padding(
@@ -265,7 +281,7 @@ class HomePage extends StatelessWidget {
                 context,
                 PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
-                      EventsPage(),
+                      CoursePage(),
                   transitionsBuilder:
                       (context, animation, secondaryAnimation, child) {
                     const begin = Offset(1.0, 0.0);

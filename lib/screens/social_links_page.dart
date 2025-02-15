@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialLinksPage extends StatelessWidget {
   const SocialLinksPage({super.key});
@@ -21,47 +22,40 @@ class SocialLinksPage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         children: [
           _buildSocialCard(
-            icon: Icons.facebook,
+            icon: FontAwesomeIcons.facebookF,
             title: 'Facebook 粉絲專頁',
             subtitle: '追蹤最新社團動態和活動資訊',
             color: Colors.blue,
             onTap: () => _launchUrl('https://facebook.com'),
           ),
           _buildSocialCard(
-            icon: Icons.discord,
+            icon: FontAwesomeIcons.discord,
             title: 'Discord 社群',
             subtitle: '加入我們的線上討論社群',
             color: Colors.indigo,
             onTap: () => _launchUrl('https://discord.gg'),
           ),
           _buildSocialCard(
-            icon: Icons.mail,
-            title: '聯絡我們',
-            subtitle: 'infoclub@nchu.edu.tw',
-            color: Colors.red,
-            onTap: () => _launchUrl('mailto:infoclub@nchu.edu.tw'),
+            icon: FontAwesomeIcons.line,
+            title: 'Line 社群',
+            subtitle: '得到最新消息',
+            color: Colors.green,
+            onTap: () => _launchUrl('https://discord.gg'),
           ),
-          const SizedBox(height: 20),
-          const Card(
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '社團辦公室',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text('地點：資訊大樓 2F 社團辦公室'),
-                  Text('開放時間：週一至週五 12:00-18:00'),
-                ],
-              ),
-            ),
+          _buildSocialCard(
+            icon: FontAwesomeIcons.instagram,
+            title: 'Instagram 專頁',
+            subtitle: '得知最新課程、活動消息',
+            color: Colors.purple,
+            onTap: () => _launchUrl('https://discord.gg'),
           ),
+          // _buildSocialCard(
+          //   icon: Icons.mail,
+          //   title: '聯絡我們',
+          //   subtitle: 'infoclub@nchu.edu.tw',
+          //   color: Colors.red,
+          //   onTap: () => _launchUrl('mailto:infoclub@nchu.edu.tw'),
+          // ),
         ],
       ),
     );
@@ -77,9 +71,16 @@ class SocialLinksPage extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 16),
       child: ListTile(
-        leading: CircleAvatar(
-          backgroundColor: color,
-          child: Icon(icon, color: Colors.white),
+        leading: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+          ),
+          child: Center(
+            child: FaIcon(icon, color: Colors.white, size: 20),
+          ),
         ),
         title: Text(title),
         subtitle: Text(subtitle),
