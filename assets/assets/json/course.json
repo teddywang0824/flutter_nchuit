@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Python 程式設計入門",
+        "instructor": "王小明",
+        "description": "從零開始學習Python程式設計，適合完全沒有程式基礎的同學。",
+        "time": "每週三 18:30-20:30",
+        "totalWeek": "共8週課程"
+    },
+    {
+        "title": "Web 前端開發",
+        "instructor": "李小華",
+        "description": "學習HTML、CSS和JavaScript，建立自己的網站。",
+        "time": "每週五 18:30-20:30",
+        "totalWeek": "共20週課程"
+    }
+]
