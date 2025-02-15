@@ -283,7 +283,7 @@ class HomePage extends StatelessWidget {
             ),
             _buildMenuCard(
               icon: Icons.groups,
-              title: '社團資訊',
+              title: '社團信息',
               onTap: () => Navigator.push(
                 context,
                 PageRouteBuilder(
@@ -329,7 +329,7 @@ class HomePage extends StatelessWidget {
             ),
             _buildMenuCard(
               icon: Icons.link,
-              title: '社群連結',
+              title: '社群資訊',
               onTap: () => Navigator.push(
                 context,
                 PageRouteBuilder(

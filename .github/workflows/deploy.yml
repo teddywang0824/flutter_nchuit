@@ -41,7 +41,7 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: 🏗 建置 Web 專案
-        run: flutter build web --base-href /nchuit_test_website/ --release
+        run: flutter build web --release
 
       - name: 📤 部署到 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
