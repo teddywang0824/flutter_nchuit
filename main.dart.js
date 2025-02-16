@@ -65502,7 +65502,7 @@ var $async$rl=A.N(function(a,b){if(a===1)return A.J(b,r)
 while(true)switch(s){case 0:o=J
 n=B.bF
 s=3
-return A.S($.r0().Me("assets/assets/json/member.json"),$async$rl)
+return A.S($.r0().Me("assets/json/member.json"),$async$rl)
 case 3:p=o.jp(n.ec(b),new A.OK(),t.I2)
 q=A.W(p,!0,p.$ti.h("ar.E"))
 s=1
@@ -65532,7 +65532,7 @@ var $async$rk=A.N(function(a,b){if(a===1)return A.J(b,r)
 while(true)switch(s){case 0:o=J
 n=B.bF
 s=3
-return A.S($.r0().Me("assets/assets/json/course.json"),$async$rk)
+return A.S($.r0().Me("assets/json/course.json"),$async$rk)
 case 3:p=o.jp(n.ec(b),new A.Qu(),t.QJ)
 q=A.W(p,!0,p.$ti.h("ar.E"))
 s=1
