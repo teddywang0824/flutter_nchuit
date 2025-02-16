@@ -93,7 +93,7 @@ class AboutPage extends StatelessWidget {
 
   Future<List<Member>> _loadMembers() async {
     final String jsonString =
-        await rootBundle.loadString('assets/assets/json/member.json'); // 讀取檔案
+        await rootBundle.loadString('assets/json/member.json'); // 讀取檔案
     final List<dynamic> jsonList = json.decode(jsonString); // 解析 json
     return jsonList.map((json) => Member.fromJson(json)).toList(); // 轉換型別
   }

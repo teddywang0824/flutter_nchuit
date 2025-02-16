@@ -89,7 +89,7 @@ class CoursePage extends StatelessWidget {
 
   Future<List<Course>> _loadCourse() async {
     final String jsonString =
-        await rootBundle.loadString('assets/assets/json/course.json'); // 讀取檔案
+        await rootBundle.loadString('assets/json/course.json'); // 讀取檔案
     final List<dynamic> jsonList = json.decode(jsonString); // 解析 json
     return jsonList.map((json) => Course.fromJson(json)).toList(); // 轉換型別
   }
