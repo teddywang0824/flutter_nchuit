@@ -33,7 +33,7 @@ class SocialLinksPage extends StatelessWidget {
             title: 'Discord 社群',
             subtitle: '加入我們的線上討論社群',
             color: Colors.indigo,
-            onTap: () => _launchUrl('https://discord.gg'),
+            onTap: () => _launchUrl('https://discord.gg/6KNPVXhC'),
           ),
           _buildSocialCard(
             icon: FontAwesomeIcons.line,
@@ -47,7 +47,21 @@ class SocialLinksPage extends StatelessWidget {
             title: 'Instagram 專頁',
             subtitle: '得知最新課程、活動消息',
             color: Colors.purple,
-            onTap: () => _launchUrl('https://discord.gg'),
+            onTap: () => _launchUrl('https://www.instagram.com/nchuit.cc'),
+          ),
+          _buildSocialCard(
+            icon: FontAwesomeIcons.youtube,
+            title: 'Youtube 頻道',
+            subtitle: '重溫我們的社團紀錄吧!記得訂閱喔~',
+            color: Colors.red,
+            onTap: () => _launchUrl('https://www.youtube.com/@nchuit'),
+          ),
+          _buildSocialCard(
+            icon: FontAwesomeIcons.github,
+            title: 'Github',
+            subtitle: '想知道我們做了哪些東西嗎?',
+            color: Colors.black,
+            onTap: () => _launchUrl('https://github.com/NCHUIT'),
           ),
           // _buildSocialCard(
           //   icon: Icons.mail,
