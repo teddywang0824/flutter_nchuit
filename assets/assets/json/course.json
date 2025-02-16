@@ -1,16 +1,16 @@
 [
-    {
-        "title": "Python 程式設計入門",
-        "instructor": "王小明",
-        "description": "從零開始學習Python程式設計，適合完全沒有程式基礎的同學。",
-        "time": "每週三 18:30-20:30",
-        "totalWeek": "共8週課程"
-    },
-    {
-        "title": "Web 前端開發",
-        "instructor": "李小華",
-        "description": "學習HTML、CSS和JavaScript，建立自己的網站。",
-        "time": "每週五 18:30-20:30",
-        "totalWeek": "共20週課程"
-    }
+  {
+    "title": "Python 全端智能電商實戰",
+    "instructor": "王智弘",
+    "description": "框架實作(Vue、Flask) + Python後端架設 + MySQL + Redis + GCP(Docker)雲端網頁部屬",
+    "time": "19:00 ~ 21:00",
+    "totalWeek": "共6堂課程"
+  },
+  {
+    "title": "Flutter 初學開發實戰",
+    "instructor": "王珈源",
+    "description": "Dart語言基本教學、Flutter基礎元件、簡易mp3撥放器App實作",
+    "time": "19:00 ~ 21:00",
+    "totalWeek": "共6堂課程"
+  }
 ]
