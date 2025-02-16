@@ -65396,7 +65396,7 @@ if(b?r.D(s,a):r.u(s,a))this.ao()}}
 A.Na.prototype={}
 A.DX.prototype={
 N(a){var s=null,r=A.adO(B.S,s,"NotoSansTC",B.d6,s)
-return new A.uD(new A.D5(A.ev("https://forms.gle/cpCzXWN5kWUx7QQS9",0,s),A.ev("https://www.youtube.com/watch?v=dQw4w9WgXcQ",0,s),s),"NCHU Information Club",r,!1,s)}}
+return new A.uD(new A.D5(A.ev("https://forms.gle/cpCzXWN5kWUx7QQS9",0,s),A.ev("https://www.youtube.com/watch?v=xvFZjo5PgG0",0,s),s),"NCHU Information Club",r,!1,s)}}
 A.D5.prototype={
 N(a){var s,r=null,q=A.acZ("https://i.imgur.com/sQVQhdk.png",r),p=t.F
 q=A.AV(A.c([new A.cn(B.A6,new A.Cw(new A.U4(this),r,r,r,A.apV(r,r,B.d6,r,r,r,5,r,r,B.j,r,r,new A.b7(25,10,25,10),r,new A.cI(A.Pv(8),B.o),r,r,r,r),r,r,!1,r,r,B.Nc,r),r)],p),!0,0,new A.cn(B.Ac,q,r),new A.cn(B.A5,B.Nd,r))
@@ -65423,7 +65423,7 @@ return A.L($async$$0,r)},
 $S:16}
 A.U5.prototype={
 $2(a,b){var s=null,r=b.b,q=r>900,p=q?24:18,o=q?40:80
-r=q?1/0:r-50
+r=q?r-600:r-50
 q=A.iX(s,s,B.l,s,s,s,s,s,"Courier New",s,s,p,s,s,s,s,s,!0,s,s,s,B.JA,s,s,s,s)
 return A.adC(A.t7(new A.ra(A.c([A.h6("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47",B.ay,B.al),A.h6('print("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47")',B.ay,B.al),A.h6('std::cout << "\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47" << std::endl;',B.ay,B.al),A.h6("JavaScript \u8ddf Java \u4e0d\u4e00\u6a23\u311f",B.ay,B.al),A.h6('printf("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47\\n");',B.ay,B.al),A.h6('System.out.println("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47");',B.ay,B.al),A.h6('console.log("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47");',B.ay,B.al),A.h6("$ rm -rf",B.ay,B.al),A.h6('$display("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47");',B.ay,B.al),A.h6("\u6211\u8981\u5403\u793e\u5718\u5c3e\u7259!!",B.ay,B.al),A.h6('println!("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47")',B.ay,B.al),A.h6('fmt.Println("\u9019\u88e1\u662f\u4e2d\u8208\u8cc7\u8a0a\u793e\u5b98\u7db2\uff0c\u9ede\u64ca\u4e0b\u65b9\u8cc7\u8a0a\u66f4\u4e86\u89e3\u6211\u5011\ud83d\udc47")',B.ay,B.al)],t.u6),A.cj(0,0,2),!0,!0,new A.U3(this.a),!0,s),1,B.br,!0,q,s,s,B.at),o,r)},
 $S:428}
@@ -65600,13 +65600,13 @@ return A.vR(q,r,new A.m1(p,B.b0,B.ah,!1,r,r,B.iP,!1,r,6,B.ac,B.hW,r,B.a2,B.U,r))
 lL(a,b,c,d,e){var s=null,r=A.rS(s,A.Bn(new A.CI(b,20,B.j,s),s,s),B.I,s,s,new A.dP(a,s,s,s,s,s,B.dF),s,40,s,s,s,s,40),q=A.fo(e,s,s)
 return A.rA(A.ahh(s,s,s,!0,!0,r,s,c,A.fo(d,s,s),q,B.AP,s),s,B.e5)}}
 A.a2w.prototype={
-$0(){return this.a.it("https://facebook.com")},
+$0(){return this.a.it("https://www.facebook.com/nchuit.cc/")},
 $S:0}
 A.a2x.prototype={
 $0(){return this.a.it("https://discord.gg/6KNPVXhC")},
 $S:0}
 A.a2y.prototype={
-$0(){return this.a.it("https://discord.gg")},
+$0(){return this.a.it("https://line.me/ti/g2/bCw9X0sudfU1pZIzIGCEZHxsoDsDzbAe8HYlQA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default")},
 $S:0}
 A.a2z.prototype={
 $0(){return this.a.it("https://www.instagram.com/nchuit.cc")},
