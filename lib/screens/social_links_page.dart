@@ -26,7 +26,7 @@ class SocialLinksPage extends StatelessWidget {
             title: 'Facebook 粉絲專頁',
             subtitle: '追蹤最新社團動態和活動資訊',
             color: Colors.blue,
-            onTap: () => _launchUrl('https://facebook.com'),
+            onTap: () => _launchUrl('https://www.facebook.com/nchuit.cc/'),
           ),
           _buildSocialCard(
             icon: FontAwesomeIcons.discord,
@@ -40,7 +40,8 @@ class SocialLinksPage extends StatelessWidget {
             title: 'Line 社群',
             subtitle: '得到最新消息',
             color: Colors.green,
-            onTap: () => _launchUrl('https://discord.gg'),
+            onTap: () => _launchUrl(
+                'https://line.me/ti/g2/bCw9X0sudfU1pZIzIGCEZHxsoDsDzbAe8HYlQA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'),
           ),
           _buildSocialCard(
             icon: FontAwesomeIcons.instagram,

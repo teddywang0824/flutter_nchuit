@@ -32,7 +32,7 @@ class NCHUInfoClubApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   HomePage({super.key});
   final Uri url = Uri.parse("https://forms.gle/cpCzXWN5kWUx7QQS9");
-  final Uri rick = Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+  final Uri rick = Uri.parse("https://www.youtube.com/watch?v=xvFZjo5PgG0");
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ class HomePage extends StatelessWidget {
                       return SizedBox(
                         height: containerHeight,
                         width: constraints.maxWidth > 900
-                            ? double.infinity
+                            ? constraints.maxWidth - 600
                             : constraints.maxWidth - 50,
                         child: DefaultTextStyle(
                           style: TextStyle(
