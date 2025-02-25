@@ -11,7 +11,7 @@ class CoursePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('此學期課程資訊'),
+        title: const Text('此學期課程資訊(請以IG公告為準)'),
       ),
       body: FutureBuilder(
         future: _loadCourse(),

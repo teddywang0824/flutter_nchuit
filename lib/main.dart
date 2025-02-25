@@ -99,7 +99,7 @@ class HomePage extends StatelessWidget {
                       return SizedBox(
                         height: containerHeight,
                         width: constraints.maxWidth > 900
-                            ? constraints.maxWidth - 600
+                            ? constraints.maxWidth - 400
                             : constraints.maxWidth - 50,
                         child: DefaultTextStyle(
                           style: TextStyle(
@@ -377,26 +377,58 @@ class HomePage extends StatelessWidget {
     required String title,
     required VoidCallback onTap,
   }) {
-    return Card(
-      elevation: 4,
-      child: InkWell(
-        onTap: onTap,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 40, color: Colors.green),
-            const SizedBox(height: 10),
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                height: 1.7, // 調整行高
-                letterSpacing: 0.5, // 增加字距
+    return _HoverCard(icon: icon, title: title, onTap: onTap);
+  }
+}
+
+class _HoverCard extends StatefulWidget {
+  final IconData icon;
+  final String title;
+  final VoidCallback onTap;
+
+  const _HoverCard({
+    required this.icon,
+    required this.title,
+    required this.onTap,
+  });
+
+  @override
+  State<_HoverCard> createState() => _HoverCardState();
+}
+
+class _HoverCardState extends State<_HoverCard> {
+  bool isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Transform.scale(
+      scale: isHovered ? 1.05 : 1.0,
+      child: Card(
+        elevation: isHovered ? 8 : 4,
+        child: InkWell(
+          onTap: widget.onTap,
+          onHover: (hover) {
+            setState(() {
+              isHovered = hover;
+            });
+          },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(widget.icon, size: 40, color: Colors.green),
+              const SizedBox(height: 10),
+              Text(
+                widget.title,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  height: 1.7,
+                  letterSpacing: 0.5,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
