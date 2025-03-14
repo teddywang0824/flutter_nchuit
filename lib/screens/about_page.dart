@@ -238,22 +238,22 @@ class AboutPage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Row(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                  ),
-                ],
-              ),
-              child: CircleAvatar(
-                radius: 35,
-                backgroundImage: NetworkImage(imageUrl),
-              ),
+        Container(
+        decoration: BoxDecoration(
+        shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              spreadRadius: 2,
+              blurRadius: 5,
             ),
+          ],
+        ),
+        child: CircleAvatar(
+          radius: 35,
+          backgroundImage: NetworkImage(imageUrl),
+        ),
+      ),
             const SizedBox(width: 20),
             Expanded(
               child: Column(
@@ -295,3 +295,4 @@ class AboutPage extends StatelessWidget {
     );
   }
 }
+

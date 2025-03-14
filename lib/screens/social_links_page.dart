@@ -58,8 +58,15 @@ class SocialLinksPage extends StatelessWidget {
         'url': 'https://github.com/NCHUIT',
       },
       {
+        'icon': FontAwesomeIcons.threads,
+        'title': 'Threads',
+        'subtitle': '也有Threads喔',
+        'color': Colors.black,
+        'url': 'https://www.threads.net/@nchuit.cc',
+      },
+      {
         'icon': Icons.mail,
-        'title': '聯絡我們',
+        'title': '聯繫社團',
         'subtitle': 'it.nchu@gmail.com',
         'color': Colors.red,
         'url':
@@ -211,7 +218,7 @@ class ConnectionPainter extends CustomPainter {
         Offset(centerX, startY), Offset(centerX, endY), solidLinePaint);
 
     for (int i = 0; i < itemCount; i++) {
-      double cardY = startY + (i * 125); // 讓每個卡片位置間距相同
+      double cardY = startY + (i * 200); // 讓每個卡片位置間距相同
       double targetX = (i % 2 == 0) ? centerX - 170 : centerX + 170; // 左右擺放
 
       Path path = Path()
